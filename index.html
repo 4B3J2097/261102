@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人簡介網站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 導覽列（5個頁面切換按鈕） -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-btn active">首頁</a></li>
+                <li><a href="#about" class="nav-btn">關於我</a></li>
+                <li><a href="#skills" class="nav-btn">興趣專長</a></li>
+                <li><a href="#portfolio" class="nav-btn">作品集</a></li>
+                <li><a href="#contact" class="nav-btn">聯絡我</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主體內容區塊 -->
+    <main>
+        <!-- 1. 首頁區塊 -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <div class="hero-copy">
+                    <h1>你好，我是 <span class="highlight">張芷涵</span></h1>
+                    <p>一位才華洋溢的設計系大學生。</p>
+                    <p>喜歡從生活中發現靈感，並用不同媒材記錄每個想法。</p>
+                    <p>歡迎看看我的作品，一起感受設計與創作的樂趣。</p>
+                    <a href="#about" class="btn" onclick="navigateToSection('about')">了解更多</a>
+                </div>
+                <img class="hero-image" src="images/個人照片.jpg" alt="張芷涵在夕陽下的個人照片">
+            </div>
+        </section>
+
+        <!-- 2. 關於我區塊 -->
+        <section id="about" class="page-section">
+            <h2>關於我</h2>
+            <div class="about-layout">
+                <div class="content-box">
+                    <div class="about-copy">
+                        <p>目前就讀於南臺科技大學設計學院，喜歡從日常生活中觀察細節、收集靈感，再透過色彩、材質與造型，把想法轉化成有溫度的作品。</p>
+                        <p>我的創作包含工藝、多媒材、包裝、平面與 3D 設計，享受從發想、嘗試到完成作品的過程，也持續探索不同媒材與設計方式。</p>
+                        <p>除了設計，平時也喜歡跳舞、旅行和攝影。這些興趣讓我接觸不同的風景與文化，也成為創作靈感的一部分。</p>
+                    </div>
+                </div>
+                <img class="about-image" src="images/關於我.jpg" alt="關於我的生活照片拼貼">
+            </div>
+        </section>
+
+        <!-- 3. 專長技能區塊 -->
+        <section id="skills" class="page-section">
+            <h2>興趣專長</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img class="skill-image" src="images/興趣專長左.jpg" alt="藝術創作與設計">
+                    <h3>Art/design</h3>
+                    <p>藝術創作與設計</p>
+                </div>
+                <div class="skill-card">
+                    <img class="skill-image" src="images/興趣專長中.jpg" alt="傳統舞蹈與街舞">
+                    <h3>Ballet/Jazz Funk</h3>
+                    <p>傳統舞蹈與街舞</p>
+                </div>
+                <div class="skill-card">
+                    <img class="skill-image" src="images/興趣專長右.jpg" alt="旅行與街頭攝影">
+                    <h3>Travel/Photography</h3>
+                    <p>旅行與街頭攝影</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 作品集區塊 -->
+        <section id="portfolio" class="page-section">
+            <h2>作品集</h2>
+            <div class="portfolio-filters" role="group" aria-label="作品分類">
+                <button type="button" class="filter-btn active" data-category="all" aria-pressed="true">全部作品</button>
+                <button type="button" class="filter-btn" data-category="多媒材創作" aria-pressed="false">多媒材創作</button>
+                <button type="button" class="filter-btn" data-category="包裝設計" aria-pressed="false">包裝設計</button>
+                <button type="button" class="filter-btn" data-category="平面設計" aria-pressed="false">平面設計</button>
+                <button type="button" class="filter-btn" data-category="3D設計" aria-pressed="false">3D設計</button>
+                <button type="button" class="filter-btn" data-category="手工藝創作" aria-pressed="false">手工藝創作</button>
+            </div>
+            <div class="portfolio-grid">
+                <article class="portfolio-card" data-category="多媒材創作">
+                    <img class="portfolio-image" src="images/花窗.jpg" alt="左鎮窗花紙藝作品">
+                    <span class="portfolio-category">多媒材創作</span>
+                    <h3>左鎮窗花</h3>
+                    <p>以層疊紙材呈現窗花意象與豐富色彩。</p>
+                </article>
+                <article class="portfolio-card" data-category="多媒材創作">
+                    <img class="portfolio-image" src="images/紙雕燈箱.jpg" alt="紙雕燈箱作品">
+                    <span class="portfolio-category">多媒材創作</span>
+                    <h3>紙雕燈箱</h3>
+                    <p>結合紙雕與燈光，營造出層次分明的畫面。</p>
+                </article>
+                <article class="portfolio-card" data-category="包裝設計">
+                    <img class="portfolio-image" src="images/甜味包裝.jpg" alt="甜味包裝設計作品">
+                    <span class="portfolio-category">包裝設計</span>
+                    <h3>甜味包裝</h3>
+                    <p>以活潑插畫與粉色調打造可愛的產品包裝。</p>
+                </article>
+                <article class="portfolio-card" data-category="包裝設計">
+                    <img class="portfolio-image" src="images/給點麵子.jpg" alt="給點麵子包裝設計作品">
+                    <span class="portfolio-category">包裝設計</span>
+                    <h3>給點麵子</h3>
+                    <p>以趣味角色與鮮明配色呈現品牌個性。</p>
+                </article>
+                <article class="portfolio-card" data-category="平面設計">
+                    <img class="portfolio-image" src="images/舊地名設計.jpg" alt="The Cat Tailor 品牌平面設計">
+                    <span class="portfolio-category">平面設計</span>
+                    <h3>Soak Si Kau 他頁面的品牌設計</h3>
+                    <p>結合縫紉機與社群資訊，呈現品牌視覺識別。</p>
+                </article>
+                <article class="portfolio-card" data-category="平面設計">
+                    <img class="portfolio-image" src="images/名片.jpg" alt="Soak Si Kau 品牌視覺設計">
+                    <span class="portfolio-category">平面設計</span>
+                    <h3>The Cat Tailor 品牌設計</h3>
+                    <p>以插畫角色與自然意象發展品牌視覺。</p>
+                </article>
+                <article class="portfolio-card" data-category="3D設計">
+                    <img class="portfolio-image" src="images/3D.jpg" alt="3D室內空間設計作品">
+                    <span class="portfolio-category">3D設計</span>
+                    <h3>居家空間 3D 設計</h3>
+                    <p>以 3D 建模呈現溫暖舒適的居家工作空間。</p>
+                </article>
+                <article class="portfolio-card" data-category="手工藝創作">
+                    <img class="portfolio-image" src="images/毛.jpg" alt="手作毛線吊飾系列">
+                    <span class="portfolio-category">手工藝創作</span>
+                    <h3>毛線吊飾系列</h3>
+                    <p>以毛線編織製作繽紛可愛的手作吊飾。</p>
+                </article>
+                <article class="portfolio-card" data-category="手工藝創作">
+                    <img class="portfolio-image" src="images/貝殼系列.jpg" alt="貝殼造型編織吊飾">
+                    <span class="portfolio-category">手工藝創作</span>
+                    <h3>貝殼系列</h3>
+                    <p>運用編織與不同材質組合，創作造型吊飾。</p>
+                </article>
+            </div>
+            <p class="portfolio-empty" hidden>此分類目前尚無作品，敬請期待。</p>
+        </section>
+
+        <!-- 5. 聯絡我區塊 -->
+        <section id="contact" class="page-section">
+            <h2>聯絡我</h2>
+            <div class="contact-layout">
+                <img class="contact-image" src="images/聯絡我.jpg" alt="底片風格的個人照片">
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('訊息已傳送！');">
+                    <input type="text" placeholder="張芷涵" required>
+                    <input type="email" placeholder="ANNA53C06@GMAIL.COM" required>
+                    <textarea rows="5" placeholder="請輸入訊息..." required></textarea>
+                    <button type="submit" class="btn">發送訊息</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
